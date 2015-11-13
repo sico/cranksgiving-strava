@@ -1,2 +1,2 @@
-require './hello'
+require './strava'
 run Sinatra::Application
