@@ -6,7 +6,7 @@ client = OAuth2::Client.new(ENV['STRAVA_APP_ID'], ENV['STRAVA_SECRET'], :site =>
 
 get '/' do
 
-	@auth_url = client.auth_code.authorize_url(:redirect_uri => ENV['BASE_URL'] + '/callback')
+	@auth_url = client.auth_code.authorize_url(:redirect_uri => ENV['BASE_URL'] + 'callback')
 	# => "https://example.org/oauth/authorization?response_type=code&client_id=client_id&redirect_uri=http://localhost:8080/oauth2/callback"
 
 	# response.class.name
