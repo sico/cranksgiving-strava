@@ -4,8 +4,19 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Connect with Cranksgiving</title>
+
+	<link rel="stylesheet" href="/stylesheets/cranks.css">
 </head>
 <body>
-	<a href="<%= @auth_url %>"><img src="http://strava.github.io/api/images/ConnectWithStrava.png" alt="Connect with Strava" /></a>
+	<div class="masthead">
+		<img src="/images/masthead.png" alt="Cranksgiving!" />
+	</div>
+	<div class="why">
+		<h1>Connect your Strava account with Cranksgiving</h1>
+		<p>We want to do cool stuff with your data! You should click the button and let us do it.</p>
+	</div>
+	<div class="connect">
+		<a href="<%= @auth_url %>"><img src="http://strava.github.io/api/images/ConnectWithStrava.png" alt="Connect with Strava" /></a>
+	</div>
 </body>
 </html>

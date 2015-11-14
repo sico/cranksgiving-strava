@@ -18,6 +18,7 @@ GEM
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
+    sass (3.4.9)
     sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -30,4 +31,5 @@ PLATFORMS
 DEPENDENCIES
   oauth2
   puma
+  sass
   sinatra
