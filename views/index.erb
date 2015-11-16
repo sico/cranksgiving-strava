@@ -15,8 +15,18 @@
 		<h1>Connect your Strava account with Cranksgiving</h1>
 		<p>We want to do cool stuff with your data! You should click the button and let us do it.</p>
 	</div>
+
+	<% if !@access_token %>
 	<div class="connect">
 		<a href="<%= @auth_url %>"><img src="http://strava.github.io/api/images/ConnectWithStrava.png" alt="Connect with Strava" /></a>
 	</div>
+	<% end %>
+
+	<% if @user %>
+	<div class="has-token">
+		<p>Thanks for signing up, <%= @user.firstname %>!</p>
+		<p><%= @user.access_token %></p>
+	</div>
+	<% end %>
 </body>
 </html>
