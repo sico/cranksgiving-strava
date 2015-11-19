@@ -44,7 +44,7 @@ get '/callback' do
 
 	athlete = @token.params['athlete']
 
-	unless User.first( email: athlete['email'] )
+	unless User.first( access_token: @token.token )
 		User.create(
 			access_token: @token.token,
 			firstname: athlete['firstname'],
