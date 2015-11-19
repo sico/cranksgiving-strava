@@ -1,32 +1,251 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Connect with Cranksgiving</title>
+	<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
 
-	<link rel="stylesheet" href="/stylesheets/cranks.css">
+
+<title>Connect with Strava</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<!-- some of my stylesheet is just terrible
+<link rel="stylesheet" href="style.css">
+-->
+<meta property="og:title" content="Cranksgiving NYC" />
+<meta property="og:type" content="activity" />
+<meta property="og:url" content="http://www.cranksgiving.org" />
+<meta property="og:image" content="http://www.cranksgiving.org/images/OpenGraph_image.jpg" />
+<meta property="og:site_name" content="Cranksgiving NYC " />
+<meta property="fb:admins" content="821288501" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,200,100,600' rel='stylesheet' type='text/css'>
+<style>
+
+body {
+	max-width: 960px;
+	margin: 0 20px; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	margin: 0 auto;
+	color: #a89989;
+	font-family: Arial, Helvetica, sans-serif;
+	background: url(images/bg.gif);
+}
+.intro {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 200;
+	font-size: 2.2em;
+	line-height: 1.6em;
+	text-align: center;
+	margin: 1px 0;
+}
+.intro2 {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+	text-align: center;
+	font-size: .9em;
+	line-height: 1.5em;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 24px;
+	font-size: 10pt;
+	color: #ae9f92;
+}
+
+p.bold {
+	text-transform: uppercase;
+	font-size: 1.4em;
+	line-height: 1.1em;
+	font-weight: bold;
+}
+
+
+a:link {
+	color: #febc20;
+	text-decoration: underline;
+	border-bottom-width: none;
+}
+
+a:hover {
+	color: #FF3232;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #febc20;
+}
+
+h6 {
+	text-transform: uppercase;
+	color: #a89989;
+	font-size: 11pt;
+	text-align: center;
+	border-bottom: 4px solid #febd1e;
+	border-top: 4px solid #febd1e;
+	font-weight: 400;
+	padding: 14px 0;
+	margin: 0;
+	background-color: white;
+}
+
+.schedulebold {
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+#navigation {
+	background-color: #f8f8f8;
+	padding: 0 45px 40px 45px;
+	overflow: auto;
+}
+
+#navigation_subpages {
+	width: 870px;
+	padding: 0 88px 0 88px;
+	position: absolute;
+	top: 141px;
+	z-index: 300;
+}
+#navigation_subpages #icon {
+	padding: 0 16px;
+	float: left;
+}
+
+#footer {
+	//width: 100%;
+	margin: 3px 0 0 0;
+	padding: 20px;
+	background-color: #a19b9a;
+}
+
+#footerp {
+	font-size: .8em;
+	color: #ffffff;
+	//vertical-align: middle ;
+	margin: 20px;
+	float: left;
+}
+
+#footercontact {
+	padding: 10px;
+}
+
+#footer a {
+	color: #ffffff;
+}
+
+#footer a:hover {
+	color: #bc0000;
+}
+.masthead_overlay {
+	position: relative;
+	top: -28px;
+	z-index: 201;
+}
+#slideshow {
+		margin: -33px 0 0 0;
+		background-color: white;
+		width: 100%;
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		width: 100%;
+		display: co
+	}
+#masthead_subpage {
+	background-image: url(images/masthead.png) no-repeat;
+	width: 100%;
+}
+
+
+</style>
+
 </head>
+
 <body>
-	<div class="masthead">
-		<img src="/images/masthead.png" alt="Cranksgiving!" />
-	</div>
-	<div class="why">
-		<h1>Connect your Strava account with Cranksgiving</h1>
-		<p>We want to do cool stuff with your data! You should click the button and let us do it.</p>
-	</div>
 
-	<% if !@access_token %>
-	<div class="connect">
-		<a href="<%= @auth_url %>"><img src="http://strava.github.io/api/images/ConnectWithStrava.png" alt="Connect with Strava" /></a>
-	</div>
-	<% end %>
+<!-- FACEBOOK LIKE BUTTON JS -->
+<!-- FACEBOOK LIKE BUTTON JS -->
+<!-- FACEBOOK LIKE BUTTON JS -->
+<!-- FACEBOOK LIKE BUTTON JS -->
 
-	<% if @user %>
-	<div class="has-token">
-		<p>Thanks for signing up, <%= @user.firstname %>!</p>
-		<p><%= @user.access_token %></p>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- END FACEBOOK LIKE BUTTON JS -->
+<!-- END FACEBOOK LIKE BUTTON JS -->
+<!-- END FACEBOOK LIKE BUTTON JS -->
+<!-- END FACEBOOK LIKE BUTTON JS -->
+<!-- END FACEBOOK LIKE BUTTON JS -->
+
+
+
+
+<div id="masthead_subpage" >
+<a href="index.html"><img src="http://www.cranksgiving.org/images/strava3.jpg" border="0" style="width: 100%"></a>
+
+</div>
+
+
+
+<div id="navigation">
+		<div class="connect" style="text-align: center">
+		<% if !@access_token %>
+					<p class="intro">Make a bigger difference.</p>
+		 			<p class="intro">Connect your Strava account</p>
+					<p class="intro2">Your Strava app this Cranksgiving will give our developers extra helpings of data to understand where cyclists need better bike lanes for smoother sailing on safer streets. Connect with us, turn on your app for the ride, and we'll start shifting our gears. In the weeks after Cranksgiving, expect to see us put this info to some great uses.</p>
+					<a href="<%= @auth_url %>"><img src="http://strava.github.io/api/images/ConnectWithStrava.png" alt="Connect with Strava" /></a>
+
+					<p class="intro2">Your information is completely safe. We will not sell or share your information with anyone else. Your Cranksgiving ride could be crucial to helping New York become a better biking city for everyone.
+					<p class="intro2">Don't have Strava? <a href="https://www.strava.com/mobile" target="_blanK">Download it here.</a></p>
+		</div>
+		<% end %>
+
+		<% if @user %>
+			<p class="intro">Thanks <%= @user.firstname %>!</p>
+				<p class="intro">You're part of something awesome now.</p>
+			<p class="intro2">You already were part of something awesome, just by coming to Cranksgiving, but now that you've connected with us, you're making your efforts twice as meaningful! </p>
+			<p class="intro2">Rest assured that your information is completely safe, and we will not sell or share it with anyone else. </p>
+		<% end %>
+	</div><br /><br /><br />
+</div>
+<h6>NYC Date: <strong>November 21 2015</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TIME: <strong>1:30pm</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PLACE:  <strong><a href="http://www.hudsonyardsnewyork.com/arts-parks/neighboring-parks/hudson-river-park" target="_blank">Hudson Yards: 11th Ave & 34th St</a></strong></h6>
+
+<div id="footer">
+<div class="fb-like" data-href="http://www.facebook.com/Cranksgiving" data-send="false" data-width="300" data-show-faces="true"></div>
+
+
+	<div id="footerp">Cranksgiving benefits <a href="https://www.bowery.org/" target="_blank">Bowery Mission</a>, <a href="http://www.nazarethhousingnyc.org/" target="_blank">Nazareth Housing</a>, and <a href="http://nybmf.org/" target="_blank">The New York Bike Messenger Foundation</a>.<br /> CONTACT: <script language="JavaScript">unScramble("ken","cranksgiving.organiza","KEN@CRANKSGIVING.ORG","Cranksgiving NYC question from cranksgiving.com","email the Cranksgiving team");</script>
 	</div>
-	<% end %>
+	<div id="footercontact">
+	<a href="http://www.facebook.com/Cranksgiving"><img src="http://www.cranksgiving.org/images/icon_footer_facebook.jpg"></a><a href="http://www.twitter.com/cranksgivingnyc"><img src="http://www.cranksgiving.org/images/icon_footer_twitter.jpg"></a>
+	</div>
+	</p>
+</div>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42227112-2', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
 </body>
+
 </html>

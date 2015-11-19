@@ -59,3 +59,11 @@ get '/callback' do
 
 	redirect '/'
 end
+
+# ajax endpoint
+get '/subscribe' do
+end
+
+# ajax endpoint
+get '/unsubscribe' do
+end
