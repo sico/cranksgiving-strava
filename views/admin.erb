@@ -1,0 +1,5 @@
+<ol>
+	<% @users.each do |user| %>
+	<li><%= user.firstname %> <%= user.lastname %> (<%= user.email %>)</li>
+	<% end %>
+</ol>
